@@ -8,7 +8,9 @@
     "build": "webpack --mode production --env.NODE_ENV=production",
     "create-env": "node ./scripts/create-env.ts",
     "format": "prettier --write .",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "husky": {
     "hooks": {
@@ -31,6 +33,7 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.14",
     "@types/react": "^16.8.24",
     "@types/react-dom": "^16.0.5",
     "@types/react-query": "^1.1.2",
@@ -45,8 +48,10 @@
     "eslint-plugin-react": "^7.21.3",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.4.3",
     "webpack": "^4.41.5",
