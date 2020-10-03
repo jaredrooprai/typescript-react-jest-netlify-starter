@@ -1,0 +1,14 @@
+[build]
+  command = "npm run create-env && npm run build"
+  publish = "public"
+
+[context.develop]
+  environment = { API_URL = "https://beta.showpass.com/" }
+
+[context.master]
+  environment = { API_URL = "https://showpass.com/" }
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
