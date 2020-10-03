@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <nav>
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/crm/customers"
+        >
+          crm-customers
+        </a>
+      </li>
+      <li>
+        <a
+          href="/crm/staff/"
+        >
+          crm-staff
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <h2>
+    Home Page
+  </h2>
+  <button>
+    Load User
+  </button>
+</DocumentFragment>
+`;
