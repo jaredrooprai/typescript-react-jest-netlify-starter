@@ -4,4 +4,8 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+  moduleNameMapper: {
+    '^@components(.*)$': '<rootDir>/src/components$1',
+    '^@utils(.*)$': '<rootDir>/src/utils$1',
+  },
 };

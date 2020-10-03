@@ -1,7 +1,8 @@
-test('HomePage has title', () => {
-  expect(3).toBe(3);
-});
+import React from 'react';
+import HomePage from '../HomePage';
+import { render } from '@utils/test-utils';
 
-test('HomePage has title', () => {
-  expect(2).toBe(2);
+test('has title', () => {
+  const { getByText } = render(<HomePage />);
+  expect(getByText('Home Page')).toBeInTheDocument;
 });
