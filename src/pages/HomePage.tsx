@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
   });
 
   const loadOnClick = () => {
-    console.log('test');
+    setQueryData(true);
   };
 
   return (
