@@ -9,14 +9,6 @@ type RouteType = {
 
 const Routes: RouteType[] = [
   {
-    path: '/crm/customers/',
-    component: lazy((): Promise<{ default: ComponentType<React.FC> }> => import('@pages/crm/CustomersPage')),
-  },
-  {
-    path: '/crm/staff/',
-    component: lazy((): Promise<{ default: ComponentType<React.FC> }> => import('@pages/crm/StaffPage')),
-  },
-  {
     path: '/login/',
     function: (): void => window.location.replace(`${process.env.API_URL}accounts/login/`),
   },
