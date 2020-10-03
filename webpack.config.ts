@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const LOCAL = 'local';
 
-module.exports = (env) => {
+type envType = {
+  NODE_ENV: string;
+};
+
+module.exports = (env: envType) => {
   return {
     mode: 'none',
     entry: {
