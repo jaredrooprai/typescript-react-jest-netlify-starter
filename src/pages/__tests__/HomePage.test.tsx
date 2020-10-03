@@ -1,12 +1,10 @@
 import React from 'react';
 import HomePage from '@pages/HomePage';
-import { fireEvent, render } from '@utils/test-utils';
-import axios from 'axios';
+import { render, cleanup } from '@utils/test-utils';
 
-test('has title', () => {
-  const { debug, getByText } = render(<HomePage />);
-  fireEvent.click(getByText('Load User'));
+afterEach(cleanup);
 
-  debug();
-  expect(getByText('Home Page')).toBeInTheDocument;
+test('should take a snapshot', () => {
+  const { asFragment } = render(<HomePage />);
+  expect(asFragment()).toMatchSnapshot();
 });
