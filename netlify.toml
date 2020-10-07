@@ -10,5 +10,10 @@
 
 [[redirects]]
   from = "/*"
-  to = "https://www.google.com"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/?hello=test"
+  to = "https://google.com"
   status = 200
