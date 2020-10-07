@@ -9,11 +9,6 @@
   environment = { API_URL = "https://showpass.com/" }
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/?hello=test"
   to = "https://google.com"
   status = 200
