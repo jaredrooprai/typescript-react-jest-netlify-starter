@@ -8,7 +8,16 @@
 [context.master]
   environment = { API_URL = "https://showpass.com/" }
 
+
 [[redirects]]
-  from = "/?hello=test"
-  to = "https://google.com"
+  from = "/*"
+  to = "/index.html"
   status = 200
+
+
+[[redirects]]
+  from = "/*"
+  to = "https://beta.showpass.com/"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
