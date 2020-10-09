@@ -21,6 +21,7 @@ module.exports = (env: envType) => {
         '@pages': path.resolve(__dirname, 'src/pages/'),
         '@components': path.resolve(__dirname, 'src/components/'),
         '@utils': path.resolve(__dirname, 'src/utils/'),
+        '@contexts': path.resolve(__dirname, 'src/contexts/'),
       },
     },
     module: {
