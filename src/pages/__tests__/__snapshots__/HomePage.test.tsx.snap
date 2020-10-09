@@ -2,31 +2,6 @@
 
 exports[`should take a snapshot 1`] = `
 <DocumentFragment>
-  <nav>
-    <ul>
-      <li>
-        <a
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          href="/crm/customers"
-        >
-          crm-customers
-        </a>
-      </li>
-      <li>
-        <a
-          href="/logout/"
-        >
-          logout
-        </a>
-      </li>
-    </ul>
-  </nav>
   <h2>
     User Credit Cards
   </h2>
