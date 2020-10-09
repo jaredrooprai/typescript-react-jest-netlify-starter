@@ -4,13 +4,14 @@
   "description": "the very best there ever was",
   "sideEffects": false,
   "scripts": {
-    "dev": "webpack-dev-server --mode development --env.NODE_ENV=local --open --https",
+    "develop": "webpack-dev-server --mode development --env.NODE_ENV=local --open --https",
     "build": "webpack --mode production --env.NODE_ENV=production",
     "create-env": "node ./scripts/create-env.ts",
     "format": "prettier --write .",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:update-snapshot": "jest --updateSnapshot"
   },
   "husky": {
     "hooks": {

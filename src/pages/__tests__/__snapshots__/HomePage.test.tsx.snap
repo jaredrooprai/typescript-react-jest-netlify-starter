@@ -20,18 +20,18 @@ exports[`should take a snapshot 1`] = `
       </li>
       <li>
         <a
-          href="/crm/staff/"
+          href="/logout/"
         >
-          crm-staff
+          logout
         </a>
       </li>
     </ul>
   </nav>
   <h2>
-    Home Page
+    User Credit Cards
   </h2>
   <button>
-    Load User
+    Load Credit Cards
   </button>
 </DocumentFragment>
 `;
