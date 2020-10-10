@@ -35,6 +35,7 @@ module.exports = (env: envType) => {
     },
     devServer: {
       historyApiFallback: true,
+      port: 4000,
     },
     watchOptions: {
       poll: true,

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import axios, { AxiosResponse } from 'axios';
+import NavBar from '@components/NavBar';
 
 const CustomersPage: React.FC = () => {
   const [queryData, setQueryData] = useState<boolean>(false);
@@ -18,6 +19,7 @@ const CustomersPage: React.FC = () => {
 
   return (
     <>
+      <NavBar />
       <h2>Customers page</h2>
       {!data && <button onClick={loadOnClick}>{isLoading ? 'loading..' : 'Load Credit Cards'}</button>}
       {!isLoading && JSON.stringify(data)}
