@@ -2,19 +2,21 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import axios, { AxiosResponse } from 'axios';
 
-interface ProtectedProps {
+interface ProtectedRouteProps {
   children: React.ReactNode;
 }
 
-const Protected: React.FC<ProtectedProps> = ({ children }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const { data, isError, isLoading } = useQuery(
     'employments',
-    (): Promise<AxiosResponse> => axios.get('api/user/venues/employments/')
+    (): Promise<AxiosResponse> => axios.get('api/user/venues/employments/'),
+    { retry: false }
   );
+
   if (isError) {
     window.location.replace(`${process.env.API_URL}accounts/login/`);
   } else if (isLoading) {
-    return <div> Authenticating... </div>;
+    return <h1> Authenticating... </h1>;
   } else if (data && data.status === 200 && data.data.length) {
     return <>{children}</>;
   } else if (data && data.status === 200 && !data.data.length) {
@@ -23,4 +25,4 @@ const Protected: React.FC<ProtectedProps> = ({ children }) => {
   return null;
 };
 
-export default Protected;
+export default ProtectedRoute;
