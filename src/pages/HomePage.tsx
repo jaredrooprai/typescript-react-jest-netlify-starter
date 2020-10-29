@@ -34,9 +34,10 @@ const HomePage: React.FC = () => {
     <>
       <NavBar />
       <h2>User Credit Cards</h2>
-      {employments_data.data.map((employment: venueType) => {
-        return <div key={employment.id}>{employment.venue.name}</div>;
-      })}
+      {employments_data &&
+        employments_data.data.map((employment: venueType) => {
+          return <div key={employment.id}>{employment.venue.name}</div>;
+        })}
       <div style={{ height: 40 }}></div>
       {!data && <button onClick={loadOnClick}>{isLoading ? 'loading..' : 'Load Credit Cards'}</button>}
       {!isLoading && JSON.stringify(data)}
